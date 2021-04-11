@@ -5,7 +5,6 @@ const Header = () => {
     <>
       <header className="header">
           <div>
-              {/* searchbar left */}
           <h1>Where in the World</h1>
           </div>
 
