@@ -9,7 +9,8 @@ const Header = () => {
           </div>
 
           <div>
-             <i className ="fas fa-moon"></i> Dark Mode
+             <button className="btn btn-toggle"></button>
+             <i className="fas fa-moon"> Dark Mode </i>
           </div>
       </header>
     </>

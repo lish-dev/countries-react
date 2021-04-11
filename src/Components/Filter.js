@@ -1,6 +1,4 @@
 import React from "react";
-
-{/*searchbar left when the user types in to search a country*/}
 const Filter = () => {
   return (
     <section className="filter">

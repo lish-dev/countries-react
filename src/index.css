@@ -15,15 +15,19 @@ body {
   padding: 20px;
   background-color: rgb(6, 51, 68);
   color: rgb(218, 216, 216);
+  cursor: pointer;
 }
 
-.header{
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(10, 67, 88);
   padding: 10px 20px;
-  
+}
+
+.header i{
+  cursor: pointer
 }
 
 .filter {
@@ -38,45 +42,40 @@ body {
   width: 100%;
 }
 
-.filter .form-control  input{
-  background-color:  transparent;
+.filter .form-control input {
+  background-color: transparent;
   padding: 8px;
   outline: none;
   border-radius: 5px;
-  color:  rgb(218, 216, 216); 
+  color: rgb(218, 216, 216);
   font-family: inherit;
   width: 100%;
   margin: 0 0 30px;
 }
 
-.filter .form-control input::placeholder{
-  color: rgb(218, 216, 216); 
+.filter .form-control input::placeholder {
+  color: rgb(218, 216, 216);
 }
 
 
-
-.filter .region-filter .select{
-  background-color:  rgb(6, 51, 68);
-  color: rgb(218, 216, 216); 
+.filter .region-filter .select {
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
   font-family: inherit;
   padding: 8px;
   width: 200px;
- 
 }
-
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 20px;
-  
 }
 
 .grid article img {
   width: 100%;
 }
-
 
 .grid .flags {
   background-color: rgb(10, 67, 88);
@@ -85,11 +84,11 @@ body {
   width: 100%;
 }
 
-.grid .flags h3{
+.grid .flags h3 {
   padding-bottom: 10px;
 }
 
-.grid .flags h4{
+.grid .flags h4 {
   padding-bottom: 5px;
 }
 .grid .flags h4 span {
@@ -103,15 +102,14 @@ body {
 }
 
 @media (min-width: 768px) {
-
-  .filter{
+  .filter {
     flex-direction: row;
   }
   .filter .form-control {
     width: auto;
   }
 
-  .filter .form-control input{
+  .filter .form-control input {
     width: auto;
     margin: 0;
   }
@@ -120,19 +118,16 @@ body {
     width: auto;
   }
 
-
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 992px){
-body {
-  padding: 40px 100px;
-}
-  .grid{
-    grid-template-columns:(4, 1fr);
+@media (min-width: 992px) {
+  body {
+    padding: 40px 100px;
+  }
+  .grid {
+    grid-template-columns: (4, 1fr);
     gap: 60px;
-
   }
 }
-
