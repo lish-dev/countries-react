@@ -1,0 +1,20 @@
+import React from "react";
+
+const Header = () => {
+  return (
+    <>
+      <header className="header">
+          <div>
+              {/* searchbar left */}
+          <h1>Where in the World</h1>
+          </div>
+
+          <div>
+             <i className ="fas fa-moon"></i> Dark Mode
+          </div>
+      </header>
+    </>
+  );
+};
+
+export default Header;
