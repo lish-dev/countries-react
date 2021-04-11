@@ -1,10 +1,11 @@
 import React from "react";
-import index from "./index.css"
-import countriesAll from "./countriesAll.json";
+import Countries from "./components/Countries"
 
 
 function App() {
-  return <div>hello world</div>;
+  return <>
+  <Countries />
+  </>
 }
 
 export default App;
