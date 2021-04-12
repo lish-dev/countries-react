@@ -5,12 +5,10 @@ const Header = () => {
     <>
       <header className="header">
           <div>
-          <h1>Where in the World</h1>
+          <h1>Where in the world</h1>
           </div>
-
           <div>
-             <button className="btn btn-toggle"></button>
-             <i className="fas fa-moon"> Dark Mode </i>
+              <i  className="fas fa-moon"></i> Dark Mode
           </div>
       </header>
     </>

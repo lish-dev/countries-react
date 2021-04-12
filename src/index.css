@@ -18,6 +18,22 @@ body {
   cursor: pointer;
 }
 
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(4, 35, 46); 
+  padding: 5px;
+  cursor: pointer;
+  color:  rgb(218, 216, 216);
+  cursor: pointer;
+}
+
+.back-btn-light {
+  background-color: white;
+}
+
+
 .header {
   display: flex;
   align-items: center;
@@ -26,9 +42,12 @@ body {
   padding: 10px 20px;
 }
 
-.header i{
-  cursor: pointer
+.header i {
+  cursor: pointer;
 }
+
+
+
 
 .filter {
   display: flex;

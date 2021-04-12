@@ -4,6 +4,7 @@ const data = "https://restcountries.eu/rest/v2/all";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
+  
 
   const fetchCountryData = async () => {
     const response = await fetch(data);
@@ -15,6 +16,11 @@ const Countries = () => {
     fetchCountryData();
   }, []);
 
+  const removeCountry = (numericCode)=> {
+    const newCountry = countries.filter((country)=> country.numericCode !== numericCode
+    ) 
+    setCountries(newCountry)
+  }
   return (
     <>
       <section className="grid">
@@ -42,6 +48,9 @@ const Countries = () => {
                   <h4>
                     Capital: <span>{capital}</span>
                   </h4>
+                  <div className="button">
+                  <button className="btn" onClick={()=> removeCountry(numericCode)}> Remove Country</button>
+                  </div>
                 </div>
               </div>
             </article>
