@@ -18,7 +18,12 @@ body {
   cursor: pointer;
 }
 
-.button{
+body.light-theme{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,11 +31,14 @@ body {
   cursor: pointer;
 }
 
-.btn{
-  background-color:  rgb(6, 51, 68);
-  color:rgb(218, 216, 216);
+.btn {
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
 }
 
+.btn-light {
+  background-color: rgb(6, 51, 68);
+}
 
 .header {
   display: flex;
@@ -40,13 +48,17 @@ body {
   padding: 10px 20px;
 }
 
+
+
 .header i {
   cursor: pointer;
 }
 
+.header .light-theme{
+  background-color: whitesmoke;
+  color: black;
 
-
-
+}
 .filter {
   display: flex;
   flex-direction: column;
@@ -60,7 +72,7 @@ body {
 }
 
 .filter .form-control input {
-  background-color: transparent;
+  background-color:rgb(6, 51, 68);
   padding: 8px;
   outline: none;
   border-radius: 5px;
@@ -73,7 +85,6 @@ body {
 .filter .form-control input::placeholder {
   color: rgb(218, 216, 216);
 }
-
 
 .filter .region-filter .select {
   background-color: rgb(6, 51, 68);
@@ -106,10 +117,47 @@ body {
 }
 
 .grid .flags h4 {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 .grid .flags h4 span {
   font-weight: 300;
+}
+
+.country article .country-details div {
+  margin: 30px 0;
+}
+
+.country article .country-details div h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.country article .country-details div h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.country article .country-details div h5 span {
+  font-weight: 300;
+}
+
+.country article h3 {
+  margin: 0px 10px;
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
+  font-weight: 600;
+}
+
+.country article .borders {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country article .borders ul {
+  margin: 10px;
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
+  padding: 3px 20px;
 }
 
 @media (min-width: 640px) {
@@ -140,11 +188,28 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .country article .country-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+
+  .country article .country-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   body {
     padding: 40px 100px;
   }
   .grid {
     grid-template-columns: (4, 1fr);
     gap: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    .country {
+      max-width: 1100px;
+      margin: auto;
+    }
   }
 }

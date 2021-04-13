@@ -10,6 +10,7 @@ const Countries = () => {
     const response = await fetch(data);
     const countries = await response.json();
     setCountries(countries);
+    
   };
 
   useEffect(() => {
@@ -48,6 +49,7 @@ const Countries = () => {
                   <h4>
                     Capital: <span>{capital}</span>
                   </h4>
+
                   <div className="button">
                   <button className="btn" onClick={()=> removeCountry(numericCode)}> Remove Country</button>
                   </div>

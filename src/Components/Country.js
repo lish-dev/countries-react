@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react";
-import { Link,} from "react-router-dom";
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react-dom/cjs/react-dom.development";
+import { Link, useParams } from "react-router-dom";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
-  
+  const { name } = useParams();
 
   useEffect(() => {
     const fetchCountryData = async () => {
       const response = await fetch(
-        "./countriesAll.json"()
+        `https://restcountries.eu/rest/v2/name/${name}`()
       );
       const country = await response.json();
       setCountry(country);
     };
 
-    fetchCountryData();
+    fetchCountryData()
   }, []);
 
+  <h1>Country Data</h1>
   return (
     <>
+      <section className="country">
       <Link to="/" className="back-btn-light">
         <i className="fas.fa.arrow-left"></i>
         Back Home
       </Link>
-
-      <section className="country">
         {country.map((c) => {
           const {
             numericCode,
@@ -39,11 +40,12 @@ const Country = () => {
             currencies,
             languages,
             borders,
-          } = c;
+          } = c
           return (
             <article key={numericCode}>
+              <div className="country-inner">
               <div className="flag">
-                <img src={flag} alt={name[0].name} />
+                <img src={flag} alt={name} />
               </div>
               <div className="country-details">
                 <div>
@@ -72,10 +74,20 @@ const Country = () => {
                     Currencies: <span>{currencies}</span>
                   </h5>
                   <h5>
-                    languages: <span>{languages}</span>
+                    Languages: <span>{languages}</span>
                   </h5>
                 </div>
-                <h3>Border Countries: {borders}</h3>
+              </div>
+              </div>
+              <div className="borders">
+                <h3>Border Countries:</h3>
+                {borders.map((border) => {
+                  return (
+                    <ul key={border}>
+                      <li>{border}</li>
+                    </ul>
+                  );
+                })}
               </div>
             </article>
           );
