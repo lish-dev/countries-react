@@ -23,7 +23,7 @@ body.light-theme{
   color: black;
 }
 
-.button {
+.buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,10 +34,28 @@ body.light-theme{
 .btn {
   background-color: rgb(6, 51, 68);
   color: rgb(218, 216, 216);
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration :none;
+  padding: 5px;
 }
 
-.btn-light {
+.btn-learn {
   background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.back-btn-light {
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration :none;
+  margin-bottom: 10px;
+  display: inline-block;
+
 }
 
 .header {
@@ -55,7 +73,7 @@ body.light-theme{
 }
 
 .header .light-theme{
-  background-color: whitesmoke;
+  background-color: rgb(160, 154, 154);
   color: black;
 
 }
@@ -129,16 +147,20 @@ body.light-theme{
 
 .country article .country-details div h2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .country article .country-details div h5 {
   font-weight: 600;
   font-size: 18px;
+  margin: 10px 0;
 }
 
 .country article .country-details div h5 span {
-  font-weight: 300;
+  margin: 0px 10px;
+  background-color: rgb(6, 51, 68);
+  color: rgb(218, 216, 216);
+  font-weight: 600;
 }
 
 .country article h3 {
@@ -151,10 +173,11 @@ body.light-theme{
 .country article .borders {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .country article .borders ul {
-  margin: 10px;
+  margin: 0 10px;
   background-color: rgb(6, 51, 68);
   color: rgb(218, 216, 216);
   padding: 3px 20px;
